@@ -131,7 +131,7 @@ export default function App() {
           {/* Decorative Flourish */}
           <div className="flex justify-center">
             <img 
-              src="/public/deeksha&shreeju.png" 
+              src="/deeksha&shreeju.png" 
               className="w-42 object-cover" 
               alt="Deeksha&Sreeju_wedding"
               referrerPolicy="no-referrer"
@@ -224,7 +224,7 @@ export default function App() {
               time="10:00 AM - 12:00 PM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a vibrant Mehendi celebration filled with colorful henna, joyful music, laughter, and dancing that lights up the evening."
-              image="public/mehendiimg.png"
+              image="/mehendiimg.png"
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
@@ -234,7 +234,7 @@ export default function App() {
               time="09:00 AM Onwards"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a joyful Haldi ceremony filled with turmeric hues, laughter, playful moments, and blessings that glow as bright as the couple. "
-              image="public/haldiimg.png"
+              image="/haldiimg.png"
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
@@ -244,7 +244,7 @@ export default function App() {
               time="04:30 PM - 06:00 PM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a beautiful evening celebrating love and new beginnings, with elegant moments, heartfelt wishes, and joyful togetherness."
-              image="public/engagementimg.png"
+              image="/engagementimg.png"
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
             
@@ -254,7 +254,7 @@ export default function App() {
               time="08:00 AM - 09:30 AM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us as we celebrate the sacred union with love, traditions, blessings, and a night filled with unforgettable joy and togetherness"
-              image="public/weddinggimg.png"
+              image="/weddinggimg.png"
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
           </div>
