@@ -119,7 +119,7 @@ export default function App() {
           
           <span className="text-brand-rose-light text-[10px] md:text-[12px] tracking-[0.4em] uppercase font-bold mb-4 block">Save The Date</span>
           
-          <h1 className="text-4xl md:text-8xl lg:text-9xl font-serif italic text-brand-ink mb-6 md:mb-8 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-12">
+          <h1 className="text-7xl md:text-8xl lg:text-9xl font-serif italic text-brand-ink mb-6 md:mb-8 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-12">
             <span>Deeksha</span>
             <span className="text-brand-rose-soft font-light text-3xl md:text-5xl italic">&</span>
             <span>Sreeju</span>
