@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Great+Vibes&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-script: "Great Vibes", cursive;
+
+  --color-brand-pink: #fff5f7;
+  --color-brand-rose: #f43f5e;
+  --color-brand-rose-light: #fb7185;
+  --color-brand-rose-soft: #fecdd3;
+  --color-brand-ink: #332a2a;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-brand-ink font-sans antialiased;
+    background: radial-gradient(circle at top left, #fff0f3, #ffe4e8, #fdf2f8);
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+.frosted-glass {
+  @apply bg-white/40 backdrop-blur-2xl border border-white/60 shadow-2xl;
+}
+
+.frosted-card {
+  @apply bg-white/30 backdrop-blur-md border border-white/50 shadow-lg;
+}
+
+.frosted-inner {
+  @apply bg-white/60 backdrop-blur-sm border border-white/80;
+}
+
+.luxury-shadow {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
