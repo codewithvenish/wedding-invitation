@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { Heart, Music, Camera, Gift, MapPin, ChevronDown } from 'lucide-react';
 import Countdown from './components/Countdown';
 import EventCard from './components/EventCard';
-import deeksha from './assets/deeksha&shreeju.png';
+import deeksha from './assets/deekshashreeju.png';
 import engagement from './assets/engagementimg.png';
 import haldiimg from './assets/haldiimg.png';
 import mehendiimg from './assets/mehendiimg.png';
