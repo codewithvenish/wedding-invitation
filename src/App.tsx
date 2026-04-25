@@ -7,6 +7,11 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { Heart, Music, Camera, Gift, MapPin, ChevronDown } from 'lucide-react';
 import Countdown from './components/Countdown';
 import EventCard from './components/EventCard';
+import deeksha from './assets/deeksha&shreeju.png';
+import engagement from './assets/engagementimg.png';
+import haldiimg from './assets/haldiimg.png';
+import mehendiimg from './assets/mehendiimg.png';
+import weddinggimg from './assets/weddinggimg.png';
 import Carousel from './components/Carousel';
 
 export default function App() {
@@ -131,7 +136,7 @@ export default function App() {
           {/* Decorative Flourish */}
           <div className="flex justify-center">
             <img 
-              src="/deeksha&shreeju.png" 
+              src={deeksha}
               className="w-42 object-cover" 
               alt="Deeksha&Sreeju_wedding"
               referrerPolicy="no-referrer"
@@ -224,7 +229,7 @@ export default function App() {
               time="10:00 AM - 12:00 PM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a vibrant Mehendi celebration filled with colorful henna, joyful music, laughter, and dancing that lights up the evening."
-              image="/mehendiimg.png"
+              image={mehendiimg}
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
@@ -234,7 +239,7 @@ export default function App() {
               time="09:00 AM Onwards"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a joyful Haldi ceremony filled with turmeric hues, laughter, playful moments, and blessings that glow as bright as the couple. "
-              image="/haldiimg.png"
+              image={haldiimg}
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
@@ -244,7 +249,7 @@ export default function App() {
               time="04:30 PM - 06:00 PM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us for a beautiful evening celebrating love and new beginnings, with elegant moments, heartfelt wishes, and joyful togetherness."
-              image="/engagementimg.png"
+              image={engagement}
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
             
@@ -254,7 +259,7 @@ export default function App() {
               time="08:00 AM - 09:30 AM"
               location="Travancore Palace, Cherthala, Alappuzha"
               description="Join us as we celebrate the sacred union with love, traditions, blessings, and a night filled with unforgettable joy and togetherness"
-              image="/weddinggimg.png"
+              image={weddinggimg}
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
           </div>
@@ -273,11 +278,11 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <label className="text-[11px] uppercase tracking-widest text-gray-500 font-bold block ml-1">First Name</label>
-                <input type="text" className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light" placeholder="Alexander" />
+                <input type="text" className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light" placeholder="Enter First Name" />
               </div>
               <div className="space-y-2">
                 <label className="text-[11px] uppercase tracking-widest text-gray-500 font-bold block ml-1">Last Name</label>
-                <input type="text" className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light" placeholder="Hamilton" />
+                <input type="text" className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light" placeholder="Enter Last Name" />
               </div>
             </div>
             
