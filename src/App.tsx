@@ -8,17 +8,18 @@ import { Heart, Music, Camera, Gift, MapPin, ChevronDown } from 'lucide-react';
 import Countdown from './components/Countdown';
 import EventCard from './components/EventCard';
 import deeksha from './assets/deekshashreeju.png';
-import engagement from './assets/engagementimg.png';
-import haldiimg from './assets/haldiimg.png';
-import mehendiimg from './assets/mehendiimg.png';
-import weddinggimg from './assets/weddinggimg.png';
+import engagement from './assets/engagementimg.JPG';
+import haldiimg from './assets/haldiimg.JPG';
+import mehendiimg from './assets/mehendiimg.JPG';
+import weddinggimg from './assets/weddingimg.JPG';
+import bg from './assets/bg.jpg';
 import Carousel from './components/Carousel';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
-  const weddingDate = "2026-06-25T18:00:00"; 
+  const weddingDate = "2026-06-25T18:00:00";
 
   const coupleImages = [
     {
@@ -48,7 +49,7 @@ export default function App() {
 
         {/* Floating Flowers */}
         <motion.img
-          animate={{ 
+          animate={{
             y: [0, -20, 0],
             rotate: [0, 5, 0]
           }}
@@ -60,7 +61,7 @@ export default function App() {
         />
 
         <motion.img
-          animate={{ 
+          animate={{
             y: [0, 30, 0],
             rotate: [0, -10, 0]
           }}
@@ -72,7 +73,7 @@ export default function App() {
         />
 
         <motion.img
-          animate={{ 
+          animate={{
             x: [0, 15, 0],
             y: [0, 15, 0]
           }}
@@ -97,34 +98,44 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative md:h-[900px] flex flex-col items-center justify-center px-4 overflow-hidden z-10">
-        <motion.div 
+        {/* <motion.div 
           style={{ y }}
           className="absolute inset-0 z-0"
         >
           <img 
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop" 
+            src={bg}
             alt="Wedding flowers"
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover object-center opacity-50"
             referrerPolicy="no-referrer"
           />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
-           initial={{ opacity: 0, scale: 0.95 }}
-           animate={{ opacity: 1, scale: 1 }}
-           transition={{ duration: 1.2, ease: "easeOut" }}
-           className="relative z-10 text-center w-full max-w-5xl mx-auto frosted-glass py-20 px-4 md:px-8 rounded-[40px]"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative z-10 text-center w-full max-w-5xl mx-auto frosted-glass py-20 px-4 md:px-8 rounded-[40px] overflow-hidden"
         >
+          <div className="absolute inset-0 z-0">
+            <img
+              src={bg}  
+              className="w-full h-full object-cover opacity-15"
+              alt="background"
+            />
+          </div>
+
+          {/* Optional overlay (for better readability) */}
+          {/* <div className="absolute inset-0 bg-white/40 z-0"></div> */}
           <div className="absolute top-0 left-0 w-full bg-gradient-to-r from-pink-200 via-rose-300 to-pink-200 opacity-50" />
-          
+
           <span className="text-brand-rose-light text-[10px] md:text-[12px] tracking-[0.4em] uppercase font-bold mb-4 block">Save The Date</span>
-          
+
           <h1 className="text-7xl md:text-8xl lg:text-9xl font-serif italic text-brand-ink mb-6 md:mb-8 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-12">
             <span>Deeksha</span>
             <span className="text-brand-rose-soft font-light text-3xl md:text-5xl italic">&</span>
             <span>Sreeju</span>
           </h1>
-          
+
           <div className="flex items-center justify-center gap-4 md:gap-6 text-brand-rose-soft mb-6 md:mb-8">
             <div className="hidden sm:block h-[1px] w-8 md:w-24 bg-brand-rose-soft/50" />
             <p className="text-gray-500 font-sans tracking-[0.2em] md:tracking-[0.3em] uppercase font-bold text-sm md:text-md whitespace-nowrap">
@@ -133,20 +144,19 @@ export default function App() {
             <div className="hidden sm:block h-[1px] w-8 md:w-24 bg-brand-rose-soft/50" />
           </div>
 
-          {/* Decorative Flourish */}
           <div className="flex justify-center">
-            <img 
+            <img
               src={deeksha}
-              className="w-42 object-cover" 
+              className="w-42 object-cover"
               alt="Deeksha&Sreeju_wedding"
               referrerPolicy="no-referrer"
             />
           </div>
-          
+
           <Countdown targetDate={weddingDate} />
         </motion.div>
 
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
           className="absolute bottom-12 text-brand-rose-light/50 cursor-pointer"
@@ -223,7 +233,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 gap-16">
-              <EventCard 
+            <EventCard
               title="Mehendi"
               date="Tuesday, June 23rd, 2026"
               time="10:00 AM - 12:00 PM"
@@ -233,7 +243,7 @@ export default function App() {
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
-              <EventCard 
+            <EventCard
               title="Haldi Ceremony"
               date="Wednesday, June 24th, 2026"
               time="09:00 AM Onwards"
@@ -243,7 +253,7 @@ export default function App() {
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
 
-            <EventCard 
+            <EventCard
               title="Engagement Ceremony"
               date="Wednesday, June 24th, 2026"
               time="04:30 PM - 06:00 PM"
@@ -252,8 +262,8 @@ export default function App() {
               image={engagement}
               mapUrl="https://maps.app.goo.gl/93JdfkwarhwSkpgq8"
             />
-            
-            <EventCard 
+
+            <EventCard
               title="The Wedding"
               date="Thursday, June 25th, 2026"
               time="08:00 AM - 09:30 AM"
@@ -273,7 +283,7 @@ export default function App() {
             <h2 className="text-5xl md:text-6xl font-serif italic text-brand-ink mb-4">RSVP</h2>
             <p className="text-gray-500 font-light italic">Kindly respond by 10th June, 2026</p>
           </div>
-          
+
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
@@ -285,7 +295,7 @@ export default function App() {
                 <input type="text" className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light" placeholder="Enter Last Name" />
               </div>
             </div>
-            
+
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-widest text-gray-500 font-bold block ml-1">Total Guests</label>
               <select className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light appearance-none">
@@ -295,16 +305,16 @@ export default function App() {
                 <option>4 Guests</option>
               </select>
             </div>
-            
+
             <div className="space-y-2">
               <label className="text-[11px] uppercase tracking-widest text-gray-500 font-bold block ml-1">Dietary Requirements</label>
               <textarea className="w-full bg-white/20 border border-white/40 rounded-2xl px-6 py-4 focus:outline-none focus:border-brand-rose-light transition-colors font-light h-32 resize-none" placeholder="Any allergies or preferences..." />
             </div>
-            
+
             <motion.button
-               whileHover={{ scale: 1.02 }}
-               whileTap={{ scale: 0.98 }}
-               className="w-full bg-brand-rose-light text-white font-bold h-16 rounded-full text-sm uppercase tracking-widest shadow-xl shadow-rose-100 transition-colors hover:bg-brand-rose"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full bg-brand-rose-light text-white font-bold h-16 rounded-full text-sm uppercase tracking-widest shadow-xl shadow-rose-100 transition-colors hover:bg-brand-rose"
             >
               Confirm Attendance
             </motion.button>
@@ -329,22 +339,22 @@ export default function App() {
 
       {/* Footer */}
       <footer className="py-24 z-10 relative flex flex-col items-center">
-         {/* Background Decoration */}
-         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-[0.03] pointer-events-none">
-            <img 
-              src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2070&auto=format&fit=crop" 
-              alt="" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
-         </div>
+        {/* Background Decoration */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-[0.03] pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=2070&auto=format&fit=crop"
+            alt=""
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </div>
 
-         <span className="font-script text-5xl text-brand-rose mb-4 relative z-10">D & S</span>
-         <p className="font-serif italic text-gray-400 text-xl mb-10">Made with love for eternity</p>
-         <div className="h-[1px] w-48 bg-brand-rose-soft/30 mb-10" />
-         <p className="text-[11px] uppercase tracking-[0.4em] text-gray-400 font-bold">© 2026 Deeksha and Sreeju</p>
-         
-         <div className="mt-12 w-full h-1 bg-gradient-to-r from-pink-100 via-rose-200 to-pink-100 opacity-30" />
+        <span className="font-script text-5xl text-brand-rose mb-4 relative z-10">D & S</span>
+        <p className="font-serif italic text-gray-400 text-xl mb-10">Made with love for eternity</p>
+        <div className="h-[1px] w-48 bg-brand-rose-soft/30 mb-10" />
+        <p className="text-[11px] uppercase tracking-[0.4em] text-gray-400 font-bold">© 2026 Deeksha and Sreeju</p>
+
+        <div className="mt-12 w-full h-1 bg-gradient-to-r from-pink-100 via-rose-200 to-pink-100 opacity-30" />
       </footer>
     </div>
   );
