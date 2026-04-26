@@ -92,7 +92,7 @@ export default function App() {
           <a href="#ceremony" className="hover:text-brand-rose transition-colors">Ceremony</a>
           <a href="#events" className="hover:text-brand-rose transition-colors">Events</a>
           {/* <a href="#registry" className="hover:text-brand-rose transition-colors">Registry</a> */}
-          <a href="#rsvp" className="text-brand-rose px-4 py-1.5 frosted-inner rounded-full hover:bg-white/80 transition-colors">RSVP</a>
+          {/* <a href="#rsvp" className="text-brand-rose px-4 py-1.5 frosted-inner rounded-full hover:bg-white/80 transition-colors">RSVP</a> */}
         </div>
       </nav>
 
@@ -277,7 +277,7 @@ export default function App() {
       </section>
 
       {/* RSVP Section */}
-      <section id="rsvp" className="py-24 px-6 md:px-24 z-10 relative">
+      {/* <section id="rsvp" className="py-24 px-6 md:px-24 z-10 relative">
         <div className="max-w-2xl mx-auto frosted-glass p-10 md:p-16 rounded-[40px]">
           <div className="text-center mb-12">
             <h2 className="text-5xl md:text-6xl font-serif italic text-brand-ink mb-4">RSVP</h2>
@@ -320,7 +320,7 @@ export default function App() {
             </motion.button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Registry Section */}
       {/* <section id="registry" className="py-24 px-6 md:px-24 z-10 relative">
